@@ -1,0 +1,703 @@
+2bb107a - prachi1401, 6 minutes ago : Update Code 1
+ src/redux/actionTypes.js | 3 [32m+++[m
+ 1 file changed, 3 insertions(+)
+
+a5e79b1 - prachi1401, 41 minutes ago : Update Code
+ .gitignore                                         |   2 [32m+[m
+ .../main/java/com/facebook/react/PackageList.java  | 211 [31m---------------------[m
+ .../ReactNativeVectorIcons/fonts/AntDesign.ttf     | Bin [31m70344[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/Entypo.ttf        | Bin [31m66200[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/EvilIcons.ttf     | Bin [31m13456[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/Feather.ttf       | Bin [31m56228[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/FontAwesome.ttf   | Bin [31m165548[m -> [32m0[m bytes
+ .../fonts/FontAwesome5_Brands.ttf                  | Bin [31m134040[m -> [32m0[m bytes
+ .../fonts/FontAwesome5_Regular.ttf                 | Bin [31m33736[m -> [32m0[m bytes
+ .../fonts/FontAwesome5_Solid.ttf                   | Bin [31m202744[m -> [32m0[m bytes
+ .../fonts/FontAwesome6_Brands.ttf                  | Bin [31m209376[m -> [32m0[m bytes
+ .../fonts/FontAwesome6_Regular.ttf                 | Bin [31m67976[m -> [32m0[m bytes
+ .../fonts/FontAwesome6_Solid.ttf                   | Bin [31m423676[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/Fontisto.ttf      | Bin [31m313528[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/Foundation.ttf    | Bin [31m56976[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/Ionicons.ttf      | Bin [31m442604[m -> [32m0[m bytes
+ .../fonts/MaterialCommunityIcons.ttf               | Bin [31m1147844[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/MaterialIcons.ttf | Bin [31m356840[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/Octicons.ttf      | Bin [31m49404[m -> [32m0[m bytes
+ .../fonts/SimpleLineIcons.ttf                      | Bin [31m54056[m -> [32m0[m bytes
+ .../ReactNativeVectorIcons/fonts/Zocial.ttf        | Bin [31m25788[m -> [32m0[m bytes
+ 21 files changed, 2 insertions(+), 211 deletions(-)
+
+43bfb2d - prachi1401, 54 minutes ago : First Code
+ .gitattributes                                     |     1 [32m+[m
+ .gitignore                                         |   161 [32m+[m[31m-[m
+ App.js                                             |     2 [32m+[m
+ .../processDebugGoogleServices/values/values.xml   |    11 [31m-[m
+ .../res/resValues/debug/values/gradleResValues.xml |     9 [31m-[m
+ .../debug/com/ksbm/hellokundli/BuildConfig.java    |    16 [31m-[m
+ android/app/build/gmpAppId/debug.txt               |     1 [31m-[m
+ .../debug/annotationProcessors.json                |     1 [31m-[m
+ .../apk_ide_redirect_file/debug/redirect.txt       |     2 [31m-[m
+ .../app_metadata/debug/app-metadata.properties     |     2 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/83pv-RKSJ-H   |   314 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/90ms-RKSJ-H   |   259 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/90ms-RKSJ-V   |   156 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/90msp-RKSJ-H  |   257 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/90msp-RKSJ-V  |   155 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/90pv-RKSJ-H   |   355 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/90pv-RKSJ-V   |   129 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Add-RKSJ-H    |   738 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Add-RKSJ-V    |   135 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-CNS1-0  |   136 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-CNS1-1  |   147 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-CNS1-2  |   148 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-CNS1-3  |   153 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-CNS1-4  |   154 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-CNS1-5  |   154 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-CNS1-6  |   154 [31m-[m
+ .../fontbox/resources/cmap/Adobe-CNS1-UCS2         | 18209 [31m------------------[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-GB1-0   |   111 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-GB1-1   |   119 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-GB1-2   |   167 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-GB1-3   |   167 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-GB1-4   |   197 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Adobe-GB1-5   |   202 [31m-[m
+ .../fontbox/resources/cmap/Adobe-GB1-UCS2          | 14267 [31m--------------[m
+ .../fontbox/resources/cmap/Adobe-Japan1-0          |   113 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Japan1-1          |   113 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Japan1-2          |   115 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Japan1-3          |   116 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Japan1-4          |   140 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Japan1-5          |   159 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Japan1-6          |   170 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Japan1-UCS2       | 19159 [31m-------------------[m
+ .../fontbox/resources/cmap/Adobe-Japan2-0          |   104 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Korea1-0          |   116 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Korea1-1          |   151 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Korea1-2          |   151 [31m-[m
+ .../fontbox/resources/cmap/Adobe-Korea1-UCS2       |  9267 [31m---------[m
+ .../com/tom_roush/fontbox/resources/cmap/B5pc-H    |   337 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/B5pc-V    |    90 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/CNS-EUC-H |   490 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/CNS-EUC-V |   538 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/ETen-B5-H |   343 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/ETen-B5-V |    91 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/ETenms-B5-H   |    79 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/ETenms-B5-V   |    99 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/EUC-H     |   207 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/EUC-V     |   105 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Ext-RKSJ-H    |   768 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Ext-RKSJ-V    |   117 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/GB-EUC-H  |   173 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/GB-EUC-V  |    98 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/GBK-EUC-H |  4273 [31m-----[m
+ .../com/tom_roush/fontbox/resources/cmap/GBK-EUC-V |    97 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/GBK2K-H   |  5325 [31m------[m
+ .../com/tom_roush/fontbox/resources/cmap/GBK2K-V   |   118 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/GBKp-EUC-H    |  4272 [31m-----[m
+ .../tom_roush/fontbox/resources/cmap/GBKp-EUC-V    |    97 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/GBpc-EUC-H    |   175 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/GBpc-EUC-V    |    98 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/HKscs-B5-H    |  1331 [31m--[m
+ .../tom_roush/fontbox/resources/cmap/HKscs-B5-V    |    90 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Identity-H    |   339 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/Identity-V    |    73 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/KSC-EUC-H |   562 [31m-[m
+ .../com/tom_roush/fontbox/resources/cmap/KSC-EUC-V |    94 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/KSCms-UHC-H   |   776 [31m-[m
+ .../fontbox/resources/cmap/KSCms-UHC-HW-H          |   775 [31m-[m
+ .../fontbox/resources/cmap/KSCms-UHC-HW-V          |    93 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/KSCms-UHC-V   |    94 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/KSCpc-EUC-H   |   608 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/KSCpc-EUC-V   |    94 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/UniCNS-UCS2-H | 16992 [31m----------------[m
+ .../tom_roush/fontbox/resources/cmap/UniCNS-UCS2-V |    90 [31m-[m
+ .../fontbox/resources/cmap/UniCNS-UTF16-H          | 19107 [31m------------------[m
+ .../fontbox/resources/cmap/UniCNS-UTF16-V          |    94 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/UniGB-UCS2-H  | 14321 [31m--------------[m
+ .../tom_roush/fontbox/resources/cmap/UniGB-UCS2-V  |   101 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/UniGB-UTF16-H | 14378 [31m--------------[m
+ .../tom_roush/fontbox/resources/cmap/UniGB-UTF16-V |   104 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/UniJIS-UCS2-H |  8870 [31m---------[m
+ .../fontbox/resources/cmap/UniJIS-UCS2-HW-H        |    81 [31m-[m
+ .../fontbox/resources/cmap/UniJIS-UCS2-HW-V        |   279 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/UniJIS-UCS2-V |   275 [31m-[m
+ .../fontbox/resources/cmap/UniJIS-UTF16-H          | 14445 [31m--------------[m
+ .../fontbox/resources/cmap/UniJIS-UTF16-V          |   299 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/UniKS-UCS2-H  |  8725 [31m---------[m
+ .../tom_roush/fontbox/resources/cmap/UniKS-UCS2-V  |    95 [31m-[m
+ .../tom_roush/fontbox/resources/cmap/UniKS-UTF16-H |  8892 [31m---------[m
+ .../tom_roush/fontbox/resources/cmap/UniKS-UTF16-V |    99 [31m-[m
+ .../pdfbox/resources/afm/Courier-Bold.afm          |   684 [31m-[m
+ .../pdfbox/resources/afm/Courier-BoldOblique.afm   |   684 [31m-[m
+ .../pdfbox/resources/afm/Courier-Oblique.afm       |   684 [31m-[m
+ .../com/tom_roush/pdfbox/resources/afm/Courier.afm |   684 [31m-[m
+ .../pdfbox/resources/afm/Helvetica-Bold.afm        |  5654 [31m------[m
+ .../pdfbox/resources/afm/Helvetica-BoldOblique.afm |  5654 [31m------[m
+ .../pdfbox/resources/afm/Helvetica-Oblique.afm     |  6102 [31m------[m
+ .../tom_roush/pdfbox/resources/afm/Helvetica.afm   |  6102 [31m------[m
+ .../com/tom_roush/pdfbox/resources/afm/Symbol.afm  |   426 [31m-[m
+ .../tom_roush/pdfbox/resources/afm/Times-Bold.afm  |  5176 [31m-----[m
+ .../pdfbox/resources/afm/Times-BoldItalic.afm      |  4768 [31m-----[m
+ .../pdfbox/resources/afm/Times-Italic.afm          |  5334 [31m------[m
+ .../tom_roush/pdfbox/resources/afm/Times-Roman.afm |  4838 [31m-----[m
+ .../pdfbox/resources/afm/ZapfDingbats.afm          |   450 [31m-[m
+ .../pdfbox/resources/glyphlist/additional.txt      |   146 [31m-[m
+ .../pdfbox/resources/glyphlist/glyphlist.txt       |  4327 [31m-----[m
+ .../pdfbox/resources/glyphlist/zapfdingbats.txt    |   247 [31m-[m
+ .../resources/ttf/LiberationSans-Regular.ttf       |   Bin [31m350200[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/AntDesign.ttf |   Bin [31m70344[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/Entypo.ttf    |   Bin [31m66200[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/EvilIcons.ttf |   Bin [31m13456[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/Feather.ttf   |   Bin [31m56228[m -> [32m0[m bytes
+ .../assets/debug/fonts/FontAwesome.ttf             |   Bin [31m165548[m -> [32m0[m bytes
+ .../assets/debug/fonts/FontAwesome5_Brands.ttf     |   Bin [31m134040[m -> [32m0[m bytes
+ .../assets/debug/fonts/FontAwesome5_Regular.ttf    |   Bin [31m33736[m -> [32m0[m bytes
+ .../assets/debug/fonts/FontAwesome5_Solid.ttf      |   Bin [31m202744[m -> [32m0[m bytes
+ .../assets/debug/fonts/FontAwesome6_Brands.ttf     |   Bin [31m209376[m -> [32m0[m bytes
+ .../assets/debug/fonts/FontAwesome6_Regular.ttf    |   Bin [31m67976[m -> [32m0[m bytes
+ .../assets/debug/fonts/FontAwesome6_Solid.ttf      |   Bin [31m423676[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/Fontisto.ttf  |   Bin [31m313528[m -> [32m0[m bytes
+ .../assets/debug/fonts/Foundation.ttf              |   Bin [31m56976[m -> [32m0[m bytes
+ .../assets/debug/fonts/Inter-Black.ttf             |   Bin [31m316372[m -> [32m0[m bytes
+ .../assets/debug/fonts/Inter-Bold.ttf              |   Bin [31m316100[m -> [32m0[m bytes
+ .../assets/debug/fonts/Inter-ExtraBold.ttf         |   Bin [31m316716[m -> [32m0[m bytes
+ .../assets/debug/fonts/Inter-ExtraLight.ttf        |   Bin [31m310808[m -> [32m0[m bytes
+ .../assets/debug/fonts/Inter-Light.ttf             |   Bin [31m310420[m -> [32m0[m bytes
+ .../assets/debug/fonts/Inter-Medium.ttf            |   Bin [31m314712[m -> [32m0[m bytes
+ .../assets/debug/fonts/Inter-Regular.ttf           |   Bin [31m309828[m -> [32m0[m bytes
+ .../assets/debug/fonts/Inter-SemiBold.ttf          |   Bin [31m315756[m -> [32m0[m bytes
+ .../assets/debug/fonts/Inter-Thin.ttf              |   Bin [31m310516[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/Ionicons.ttf  |   Bin [31m442604[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-Black.ttf              |   Bin [31m61692[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-BlackItalic.ttf        |   Bin [31m66120[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/Jost-Bold.ttf |   Bin [31m61612[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-BoldItalic.ttf         |   Bin [31m66036[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-ExtraBold.ttf          |   Bin [31m61712[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-ExtraBoldItalic.ttf    |   Bin [31m66116[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-ExtraLight.ttf         |   Bin [31m61688[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-ExtraLightItalic.ttf   |   Bin [31m65932[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-Italic.ttf             |   Bin [31m66064[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-Light.ttf              |   Bin [31m61624[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-LightItalic.ttf        |   Bin [31m66100[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-Medium.ttf             |   Bin [31m61652[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-MediumItalic.ttf       |   Bin [31m66160[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-Regular.ttf            |   Bin [31m61524[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-SemiBold.ttf           |   Bin [31m61648[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-SemiBoldItalic.ttf     |   Bin [31m66148[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/Jost-Thin.ttf |   Bin [31m61584[m -> [32m0[m bytes
+ .../assets/debug/fonts/Jost-ThinItalic.ttf         |   Bin [31m65724[m -> [32m0[m bytes
+ .../assets/debug/fonts/MaterialCommunityIcons.ttf  |   Bin [31m1147844[m -> [32m0[m bytes
+ .../assets/debug/fonts/MaterialIcons.ttf           |   Bin [31m356840[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/Octicons.ttf  |   Bin [31m49404[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-Bold.ttf           |   Bin [31m122092[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-BoldItalic.ttf     |   Bin [31m127152[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-ExtraBold.ttf      |   Bin [31m122492[m -> [32m0[m bytes
+ .../debug/fonts/OpenSans-ExtraBoldItalic.ttf       |   Bin [31m127704[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-Italic.ttf         |   Bin [31m127424[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-Light.ttf          |   Bin [31m122076[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-LightItalic.ttf    |   Bin [31m127708[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-Medium.ttf         |   Bin [31m122256[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-MediumItalic.ttf   |   Bin [31m127596[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-Regular.ttf        |   Bin [31m122108[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-SemiBold.ttf       |   Bin [31m122036[m -> [32m0[m bytes
+ .../assets/debug/fonts/OpenSans-SemiBoldItalic.ttf |   Bin [31m127564[m -> [32m0[m bytes
+ .../assets/debug/fonts/Righteous-Regular.ttf       |   Bin [31m40892[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-Black.ttf            |   Bin [31m168060[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-BlackItalic.ttf      |   Bin [31m174108[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-Bold.ttf             |   Bin [31m167336[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-BoldItalic.ttf       |   Bin [31m171508[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-Italic.ttf           |   Bin [31m170504[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-Light.ttf            |   Bin [31m167000[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-LightItalic.ttf      |   Bin [31m173172[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-Medium.ttf           |   Bin [31m168644[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-MediumItalic.ttf     |   Bin [31m173416[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-Regular.ttf          |   Bin [31m168260[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-Thin.ttf             |   Bin [31m168488[m -> [32m0[m bytes
+ .../assets/debug/fonts/Roboto-ThinItalic.ttf       |   Bin [31m172860[m -> [32m0[m bytes
+ .../assets/debug/fonts/SimpleLineIcons.ttf         |   Bin [31m54056[m -> [32m0[m bytes
+ .../intermediates/assets/debug/fonts/Zocial.ttf    |   Bin [31m25788[m -> [32m0[m bytes
+ .../net/time4j/calendar/data/islamic_diyanet.data  |   149 [31m-[m
+ .../net/time4j/calendar/data/islamic_icu4j.data    |  1616 [31m--[m
+ .../net/time4j/calendar/data/islamic_umalqura.data |   223 [31m-[m
+ .../debug/net/time4j/calendar/data/nengo.data      |   Bin [31m14228[m -> [32m0[m bytes
+ .../net/time4j/calendar/data/tsuchihashi.data      |   Bin [31m3516[m -> [32m0[m bytes
+ .../time4j/calendar/names/bahai/bahai.properties   |    84 [31m-[m
+ .../calendar/names/bahai/bahai_ar.properties       |    65 [31m-[m
+ .../calendar/names/bahai/bahai_de.properties       |   125 [31m-[m
+ .../calendar/names/bahai/bahai_en.properties       |    89 [31m-[m
+ .../calendar/names/bahai/bahai_es.properties       |    89 [31m-[m
+ .../calendar/names/bahai/bahai_fa.properties       |    65 [31m-[m
+ .../calendar/names/bahai/bahai_fr.properties       |   125 [31m-[m
+ .../calendar/names/bahai/bahai_nl.properties       |    89 [31m-[m
+ .../calendar/names/bahai/bahai_pt.properties       |    89 [31m-[m
+ .../calendar/names/bahai/bahai_ru.properties       |   125 [31m-[m
+ .../calendar/names/bahai/bahai_zh.properties       |   125 [31m-[m
+ .../calendar/names/buddhist/buddhist.properties    |    19 [31m-[m
+ .../calendar/names/buddhist/buddhist_am.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_ar.properties |     7 [31m-[m
+ .../names/buddhist/buddhist_ast.properties         |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_be.properties |     6 [31m-[m
+ .../calendar/names/buddhist/buddhist_bn.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_br.properties |     6 [31m-[m
+ .../calendar/names/buddhist/buddhist_bs.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_ca.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_cs.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_da.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_de.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_el.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_en.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_es.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_et.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_eu.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_fa.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_fi.properties |     9 [31m-[m
+ .../names/buddhist/buddhist_fil.properties         |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_fr.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_fy.properties |     9 [31m-[m
+ .../calendar/names/buddhist/buddhist_ga.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_gd.properties |     4 [31m-[m
+ .../names/buddhist/buddhist_gsw.properties         |     6 [31m-[m
+ .../calendar/names/buddhist/buddhist_gu.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_he.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_hr.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_hu.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_id.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_is.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_it.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_ja.properties |     9 [31m-[m
+ .../calendar/names/buddhist/buddhist_km.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_kn.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_ko.properties |     5 [31m-[m
+ .../calendar/names/buddhist/buddhist_lb.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_lo.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_lt.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_lv.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_mk.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_ml.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_mr.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_ms.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_nb.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_nl.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_pa.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_pl.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_pt.properties |     7 [31m-[m
+ .../names/buddhist/buddhist_pt_PT.properties       |     8 [31m-[m
+ .../calendar/names/buddhist/buddhist_ro.properties |    13 [31m-[m
+ .../calendar/names/buddhist/buddhist_ru.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_sk.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_sl.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_sr.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_sv.properties |     3 [31m-[m
+ .../calendar/names/buddhist/buddhist_ta.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_te.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_th.properties |    11 [31m-[m
+ .../calendar/names/buddhist/buddhist_tr.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_ug.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_uk.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_ur.properties |     7 [31m-[m
+ .../calendar/names/buddhist/buddhist_vi.properties |     6 [31m-[m
+ .../calendar/names/buddhist/buddhist_zh.properties |    13 [31m-[m
+ .../names/buddhist/buddhist_zh_TW.properties       |    13 [31m-[m
+ .../calendar/names/chinese/chinese.properties      |    63 [31m-[m
+ .../calendar/names/chinese/chinese_ar.properties   |    15 [31m-[m
+ .../calendar/names/chinese/chinese_ast.properties  |    79 [31m-[m
+ .../calendar/names/chinese/chinese_br.properties   |    84 [31m-[m
+ .../calendar/names/chinese/chinese_ca.properties   |    19 [31m-[m
+ .../calendar/names/chinese/chinese_cs.properties   |    19 [31m-[m
+ .../calendar/names/chinese/chinese_de.properties   |    20 [31m-[m
+ .../calendar/names/chinese/chinese_ee.properties   |    57 [31m-[m
+ .../calendar/names/chinese/chinese_en.properties   |    46 [31m-[m
+ .../names/chinese/chinese_en_AU.properties         |    20 [31m-[m
+ .../names/chinese/chinese_en_CA.properties         |     6 [31m-[m
+ .../calendar/names/chinese/chinese_es.properties   |    20 [31m-[m
+ .../calendar/names/chinese/chinese_et.properties   |    27 [31m-[m
+ .../calendar/names/chinese/chinese_fa.properties   |    14 [31m-[m
+ .../calendar/names/chinese/chinese_fi.properties   |     6 [31m-[m
+ .../calendar/names/chinese/chinese_fr.properties   |    98 [31m-[m
+ .../calendar/names/chinese/chinese_fy.properties   |    20 [31m-[m
+ .../calendar/names/chinese/chinese_gd.properties   |    98 [31m-[m
+ .../calendar/names/chinese/chinese_hr.properties   |     6 [31m-[m
+ .../calendar/names/chinese/chinese_id.properties   |     6 [31m-[m
+ .../calendar/names/chinese/chinese_it.properties   |    20 [31m-[m
+ .../calendar/names/chinese/chinese_ja.properties   |    98 [31m-[m
+ .../calendar/names/chinese/chinese_ko.properties   |    59 [31m-[m
+ .../calendar/names/chinese/chinese_lb.properties   |    20 [31m-[m
+ .../calendar/names/chinese/chinese_lo.properties   |    20 [31m-[m
+ .../calendar/names/chinese/chinese_lt.properties   |    20 [31m-[m
+ .../calendar/names/chinese/chinese_ms.properties   |     6 [31m-[m
+ .../calendar/names/chinese/chinese_nb.properties   |     6 [31m-[m
+ .../calendar/names/chinese/chinese_nl.properties   |    72 [31m-[m
+ .../calendar/names/chinese/chinese_pl.properties   |    45 [31m-[m
+ .../calendar/names/chinese/chinese_pt.properties   |    98 [31m-[m
+ .../names/chinese/chinese_pt_PT.properties         |    29 [31m-[m
+ .../calendar/names/chinese/chinese_ro.properties   |    53 [31m-[m
+ .../calendar/names/chinese/chinese_ru.properties   |    59 [31m-[m
+ .../calendar/names/chinese/chinese_sv.properties   |    13 [31m-[m
+ .../calendar/names/chinese/chinese_ta.properties   |    58 [31m-[m
+ .../calendar/names/chinese/chinese_th.properties   |    33 [31m-[m
+ .../calendar/names/chinese/chinese_ug.properties   |    20 [31m-[m
+ .../calendar/names/chinese/chinese_vi.properties   |    72 [31m-[m
+ .../calendar/names/chinese/chinese_zh.properties   |    98 [31m-[m
+ .../names/chinese/chinese_zh_TW.properties         |    98 [31m-[m
+ .../time4j/calendar/names/coptic/coptic.properties |    44 [31m-[m
+ .../calendar/names/coptic/coptic_am.properties     |     3 [31m-[m
+ .../calendar/names/coptic/coptic_ar.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_bn.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_br.properties     |    90 [31m-[m
+ .../calendar/names/coptic/coptic_cs.properties     |    90 [31m-[m
+ .../calendar/names/coptic/coptic_da.properties     |    14 [31m-[m
+ .../calendar/names/coptic/coptic_de.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_ee.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_el.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_en.properties     |     4 [31m-[m
+ .../calendar/names/coptic/coptic_es.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_fa.properties     |    63 [31m-[m
+ .../calendar/names/coptic/coptic_fi.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_fil.properties    |     6 [31m-[m
+ .../calendar/names/coptic/coptic_fr.properties     |    91 [31m-[m
+ .../calendar/names/coptic/coptic_fr_CA.properties  |    32 [31m-[m
+ .../calendar/names/coptic/coptic_fy.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_gd.properties     |     4 [31m-[m
+ .../calendar/names/coptic/coptic_gu.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_he.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_hu.properties     |    70 [31m-[m
+ .../calendar/names/coptic/coptic_is.properties     |    90 [31m-[m
+ .../calendar/names/coptic/coptic_ja.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_kk.properties     |    14 [31m-[m
+ .../calendar/names/coptic/coptic_kn.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_ko.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_lo.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_lt.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_lv.properties     |    63 [31m-[m
+ .../calendar/names/coptic/coptic_mk.properties     |    90 [31m-[m
+ .../calendar/names/coptic/coptic_ml.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_mr.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_nb.properties     |    90 [31m-[m
+ .../calendar/names/coptic/coptic_nl.properties     |    62 [31m-[m
+ .../calendar/names/coptic/coptic_pa.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_pl.properties     |    14 [31m-[m
+ .../calendar/names/coptic/coptic_ro.properties     |    91 [31m-[m
+ .../calendar/names/coptic/coptic_ru.properties     |    91 [31m-[m
+ .../calendar/names/coptic/coptic_sk.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_sr.properties     |    14 [31m-[m
+ .../calendar/names/coptic/coptic_sv.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_ta.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_te.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_th.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_tr.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_uk.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_ur.properties     |    56 [31m-[m
+ .../calendar/names/coptic/coptic_vi.properties     |    84 [31m-[m
+ .../calendar/names/coptic/coptic_zh.properties     |    94 [31m-[m
+ .../calendar/names/coptic/coptic_zh_TW.properties  |    62 [31m-[m
+ .../calendar/names/ethiopic/ethiopic.properties    |   102 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_am.properties |   141 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_ar.properties |    14 [31m-[m
+ .../names/ethiopic/ethiopic_ast.properties         |    94 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_bn.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_cs.properties |    90 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_da.properties |    14 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_de.properties |     6 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_ee.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_en.properties |     6 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_es.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_fa.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_fi.properties |    56 [31m-[m
+ .../names/ethiopic/ethiopic_fil.properties         |     6 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_fr.properties |    66 [31m-[m
+ .../names/ethiopic/ethiopic_fr_CA.properties       |    28 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_fy.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_gd.properties |     6 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_gu.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_he.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_hi.properties |    14 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_hr.properties |    14 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_hu.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_is.properties |    90 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_ja.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_kn.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_ko.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_lo.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_lt.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_lv.properties |    66 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_mk.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_ml.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_mr.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_nb.properties |    89 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_nl.properties |    90 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_pa.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_pl.properties |    14 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_ro.properties |    66 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_ru.properties |    66 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_sk.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_sr.properties |    14 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_sv.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_ta.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_te.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_th.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_tr.properties |    28 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_uk.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_ur.properties |    56 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_vi.properties |    84 [31m-[m
+ .../calendar/names/ethiopic/ethiopic_zh.properties |    91 [31m-[m
+ .../names/ethiopic/ethiopic_zh_TW.properties       |    62 [31m-[m
+ .../calendar/names/frenchrev/frenchrev.properties  |    99 [31m-[m
+ .../names/frenchrev/frenchrev_ca.properties        |    43 [31m-[m
+ .../names/frenchrev/frenchrev_de.properties        |    30 [31m-[m
+ .../names/frenchrev/frenchrev_en.properties        |    30 [31m-[m
+ .../names/frenchrev/frenchrev_es.properties        |    29 [31m-[m
+ .../names/frenchrev/frenchrev_eu.properties        |    84 [31m-[m
+ .../names/frenchrev/frenchrev_fr.properties        |    50 [31m-[m
+ .../names/frenchrev/frenchrev_it.properties        |    29 [31m-[m
+ .../names/frenchrev/frenchrev_ja.properties        |    41 [31m-[m
+ .../names/frenchrev/frenchrev_pt.properties        |    29 [31m-[m
+ .../names/frenchrev/frenchrev_ru.properties        |    29 [31m-[m
+ .../calendar/names/generic/generic.properties      |    54 [31m-[m
+ .../calendar/names/generic/generic_af.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_am.properties   |    12 [31m-[m
+ .../calendar/names/generic/generic_ar.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_as.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_ast.properties  |     6 [31m-[m
+ .../calendar/names/generic/generic_az.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_be.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_bg.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_bn.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_br.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_bs.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_ca.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_cs.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_cy.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_da.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_de.properties   |    15 [31m-[m
+ .../calendar/names/generic/generic_ee.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_el.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_en.properties   |    15 [31m-[m
+ .../names/generic/generic_en_CA.properties         |     6 [31m-[m
+ .../names/generic/generic_en_IE.properties         |     3 [31m-[m
+ .../names/generic/generic_en_IN.properties         |     6 [31m-[m
+ .../names/generic/generic_en_MT.properties         |     4 [31m-[m
+ .../names/generic/generic_en_NZ.properties         |     4 [31m-[m
+ .../names/generic/generic_en_ZA.properties         |     6 [31m-[m
+ .../calendar/names/generic/generic_eo.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_es.properties   |    15 [31m-[m
+ .../names/generic/generic_es_CL.properties         |     4 [31m-[m
+ .../names/generic/generic_es_CO.properties         |     4 [31m-[m
+ .../names/generic/generic_es_DO.properties         |     3 [31m-[m
+ .../names/generic/generic_es_GT.properties         |     4 [31m-[m
+ .../names/generic/generic_es_HN.properties         |     4 [31m-[m
+ .../names/generic/generic_es_MX.properties         |     3 [31m-[m
+ .../names/generic/generic_es_PA.properties         |     4 [31m-[m
+ .../names/generic/generic_es_PE.properties         |     3 [31m-[m
+ .../names/generic/generic_es_PR.properties         |     4 [31m-[m
+ .../names/generic/generic_es_US.properties         |     3 [31m-[m
+ .../calendar/names/generic/generic_et.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_eu.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_fa.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_fi.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_fil.properties  |     6 [31m-[m
+ .../calendar/names/generic/generic_fo.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_fr.properties   |    15 [31m-[m
+ .../names/generic/generic_fr_BE.properties         |     3 [31m-[m
+ .../names/generic/generic_fr_CA.properties         |     3 [31m-[m
+ .../names/generic/generic_fr_CH.properties         |     4 [31m-[m
+ .../calendar/names/generic/generic_fy.properties   |    32 [31m-[m
+ .../calendar/names/generic/generic_ga.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_gd.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_gl.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_gsw.properties  |     6 [31m-[m
+ .../calendar/names/generic/generic_gu.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_he.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_hi.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_hr.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_hu.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_hy.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_id.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_is.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_it.properties   |    15 [31m-[m
+ .../names/generic/generic_it_CH.properties         |     6 [31m-[m
+ .../calendar/names/generic/generic_ja.properties   |     9 [31m-[m
+ .../calendar/names/generic/generic_ka.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_kab.properties  |     6 [31m-[m
+ .../calendar/names/generic/generic_kk.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_km.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_kn.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_ko.properties   |     9 [31m-[m
+ .../calendar/names/generic/generic_ky.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_lb.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_lo.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_lt.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_lv.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_mk.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_ml.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_mn.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_mr.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_ms.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_mt.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_my.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_nb.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_ne.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_nl.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_nn.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_or.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_pa.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_pl.properties   |    12 [31m-[m
+ .../calendar/names/generic/generic_ps.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_pt.properties   |    15 [31m-[m
+ .../names/generic/generic_pt_PT.properties         |     3 [31m-[m
+ .../calendar/names/generic/generic_ro.properties   |     9 [31m-[m
+ .../calendar/names/generic/generic_ru.properties   |    12 [31m-[m
+ .../calendar/names/generic/generic_sd.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_si.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_sk.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_sl.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_so.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_sq.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_sr.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_sv.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_sw.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_ta.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_te.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_th.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_tk.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_to.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_tr.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_ug.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_uk.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_ur.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_uz.properties   |     6 [31m-[m
+ .../calendar/names/generic/generic_vi.properties   |    10 [31m-[m
+ .../calendar/names/generic/generic_zh.properties   |     9 [31m-[m
+ .../names/generic/generic_zh_TW.properties         |     6 [31m-[m
+ .../calendar/names/generic/generic_zu.properties   |     6 [31m-[m
+ .../time4j/calendar/names/hebrew/hebrew.properties |    44 [31m-[m
+ .../calendar/names/hebrew/hebrew_ar.properties     |    69 [31m-[m
+ .../calendar/names/hebrew/hebrew_ast.properties    |    30 [31m-[m
+ .../calendar/names/hebrew/hebrew_bg.properties     |    15 [31m-[m
+ .../calendar/names/hebrew/hebrew_bn.properties     |    96 [31m-[m
+ .../calendar/names/hebrew/hebrew_br.properties     |    36 [31m-[m
+ .../calendar/names/hebrew/hebrew_bs.properties     |     3 [31m-[m
+ .../calendar/names/hebrew/hebrew_cs.properties     |   103 [31m-[m
+ .../calendar/names/hebrew/hebrew_da.properties     |    15 [31m-[m
+ .../calendar/names/hebrew/hebrew_de.properties     |    30 [31m-[m
+ .../calendar/names/hebrew/hebrew_ee.properties     |    63 [31m-[m
+ .../calendar/names/hebrew/hebrew_el.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_en.properties     |     9 [31m-[m
+ .../calendar/names/hebrew/hebrew_es.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_fa.properties     |    97 [31m-[m
+ .../calendar/names/hebrew/hebrew_fi.properties     |    78 [31m-[m
+ .../calendar/names/hebrew/hebrew_fil.properties    |     6 [31m-[m
+ .../calendar/names/hebrew/hebrew_fr.properties     |    71 [31m-[m
+ .../calendar/names/hebrew/hebrew_fr_CA.properties  |    45 [31m-[m
+ .../calendar/names/hebrew/hebrew_fy.properties     |    69 [31m-[m
+ .../calendar/names/hebrew/hebrew_gd.properties     |     6 [31m-[m
+ .../calendar/names/hebrew/hebrew_gu.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_he.properties     |   101 [31m-[m
+ .../calendar/names/hebrew/hebrew_hr.properties     |     3 [31m-[m
+ .../calendar/names/hebrew/hebrew_hu.properties     |    67 [31m-[m
+ .../calendar/names/hebrew/hebrew_is.properties     |   103 [31m-[m
+ .../calendar/names/hebrew/hebrew_it.properties     |     3 [31m-[m
+ .../calendar/names/hebrew/hebrew_ja.properties     |    66 [31m-[m
+ .../calendar/names/hebrew/hebrew_ka.properties     |    63 [31m-[m
+ .../calendar/names/hebrew/hebrew_kn.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_ko.properties     |    63 [31m-[m
+ .../calendar/names/hebrew/hebrew_lb.properties     |     3 [31m-[m
+ .../calendar/names/hebrew/hebrew_lo.properties     |    63 [31m-[m
+ .../calendar/names/hebrew/hebrew_lt.properties     |   103 [31m-[m
+ .../calendar/names/hebrew/hebrew_lv.properties     |    63 [31m-[m
+ .../calendar/names/hebrew/hebrew_mk.properties     |    66 [31m-[m
+ .../calendar/names/hebrew/hebrew_ml.properties     |    90 [31m-[m
+ .../calendar/names/hebrew/hebrew_mr.properties     |    93 [31m-[m
+ .../calendar/names/hebrew/hebrew_ms.properties     |     6 [31m-[m
+ .../calendar/names/hebrew/hebrew_nb.properties     |   103 [31m-[m
+ .../calendar/names/hebrew/hebrew_nl.properties     |    66 [31m-[m
+ .../calendar/names/hebrew/hebrew_pa.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_pl.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_pt_PT.properties  |     3 [31m-[m
+ .../calendar/names/hebrew/hebrew_ro.properties     |    65 [31m-[m
+ .../calendar/names/hebrew/hebrew_ru.properties     |    63 [31m-[m
+ .../calendar/names/hebrew/hebrew_sk.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_sr.properties     |    15 [31m-[m
+ .../calendar/names/hebrew/hebrew_sv.properties     |    63 [31m-[m
+ .../calendar/names/hebrew/hebrew_ta.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_te.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_th.properties     |    69 [31m-[m
+ .../calendar/names/hebrew/hebrew_tr.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_ug.properties     |     3 [31m-[m
+ .../calendar/names/hebrew/hebrew_uk.properties     |    45 [31m-[m
+ .../calendar/names/hebrew/hebrew_ur.properties     |    60 [31m-[m
+ .../calendar/names/hebrew/hebrew_vi.properties     |    97 [31m-[m
+ .../calendar/names/hebrew/hebrew_zh.properties     |    88 [31m-[m
+ .../calendar/names/hebrew/hebrew_zh_TW.properties  |    73 [31m-[m
+ .../time4j/calendar/names/hindu/hindu.properties   |    44 [31m-[m
+ .../calendar/names/hindu/hindu_bn.properties       |    14 [31m-[m
+ .../calendar/names/hindu/hindu_hi.properties       |    17 [31m-[m
+ .../calendar/names/hindu/hindu_kn.properties       |    14 [31m-[m
+ .../calendar/names/hindu/hindu_ml.properties       |    14 [31m-[m
+ .../calendar/names/hindu/hindu_or.properties       |    17 [31m-[m
+ .../calendar/names/hindu/hindu_pa.properties       |    14 [31m-[m
+ .../calendar/names/hindu/hindu_ru.properties       |    18 [31m-[m
+ .../calendar/names/hindu/hindu_sa.properties       |    14 [31m-[m
+ .../calendar/names/hindu/hindu_ta.properties       |    14 [31m-[m
+ .../calendar/names/hindu/hindu_te.properties       |    14 [31m-[m
+ .../calendar/names/historic/historic_la.properties |    13 [31m-[m
+ .../time4j/calendar/names/indian/indian.properties |    40 [31m-[m
+ .../calendar/names/indian/indian_ast.properties    |    91 [31m-[m
+ .../calendar/names/indian/indian_bg.properties     |    13 [31m-[m
+ .../calendar/names/indian/indian_bn.properties     |    85 [31m-[m
+ .../calendar/names/indian/indian_br.properties     |    33 [31m-[m
+ .../calendar/names/indian/indian_cs.properties     |    91 [31m-[m
+ .../calendar/names/indian/indian_da.properties     |    13 [31m-[m
+ .../calendar/names/indian/indian_de.properties     |    52 [31m-[m
+ .../calendar/names/indian/indian_ee.properties     |    52 [31m-[m
+ .../calendar/names/indian/indian_el.properties     |     7 [31m-[m
+ .../calendar/names/indian/indian_es.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_fa.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_fi.properties     |    55 [31m-[m
+ .../calendar/names/indian/indian_fil.properties    |     6 [31m-[m
+ .../calendar/names/indian/indian_fr.properties     |    55 [31m-[m
+ .../calendar/names/indian/indian_fr_CA.properties  |    33 [31m-[m
+ .../calendar/names/indian/indian_fy.properties     |    81 [31m-[m
+ .../calendar/names/indian/indian_gd.properties     |     4 [31m-[m
+ .../calendar/names/indian/indian_gu.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_he.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_hi.properties     |    81 [31m-[m
+ .../calendar/names/indian/indian_hr.properties     |    13 [31m-[m
+ .../calendar/names/indian/indian_hu.properties     |    52 [31m-[m
+ .../calendar/names/indian/indian_id.properties     |     7 [31m-[m
+ .../calendar/names/indian/indian_is.properties     |    91 [31m-[m
+ .../calendar/names/indian/indian_ja.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_kn.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_lo.properties     |    81 [31m-[m
+ .../calendar/names/indian/indian_lt.properties     |    85 [31m-[m
+ .../calendar/names/indian/indian_lv.properties     |    52 [31m-[m
+ .../calendar/names/indian/indian_mk.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_ml.properties     |    85 [31m-[m
+ .../calendar/names/indian/indian_mr.properties     |    85 [31m-[m
+ .../calendar/names/indian/indian_nb.properties     |    91 [31m-[m
+ .../calendar/names/indian/indian_ne.properties     |    13 [31m-[m
+ .../calendar/names/indian/indian_nl.properties     |    58 [31m-[m
+ .../calendar/names/indian/indian_pa.properties     |    85 [31m-[m
+ .../calendar/names/indian/indian_pl.properties     |    65 [31m-[m
+ .../calendar/names/indian/indian_ps.properties     |    85 [31m-[m
+ .../calendar/names/indian/indian_ro.properties     |    52 [31m-[m
+ .../calendar/names/indian/indian_ru.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_sk.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_sr.properties     |    16 [31m-[m
+ .../calendar/names/indian/indian_sv.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_ta.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_te.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_th.properties     |    55 [31m-[m
+ .../calendar/names/indian/indian_uk.properties     |    52 [31m-[m
+ .../calendar/names/indian/indian_ur.properties     |    59 [31m-[m
+ .../calendar/names/indian/indian_vi.properties     |    85 [31m-[m
+ .../calendar/names/indian/indian_zh.properties     |    65 [31m-[m
+ .../calendar/names/indian/indian_zh_TW.properties  |    65 [31m-[m
+ .../calendar/names/islamic/islamic.properties      |    53 [31m-[m
+ .../calendar/names/islamic/islamic_am.properties   |    13 [31m-[m
+ .../calendar/names/islamic/islamic_ar.properties   |    87 [31m-[m
+ .../calendar/names/islamic/islamic_ast.properties  |    91 [31m-[m
+ .../calendar/names/islamic/islamic_bg.properties   |    13 [31m-[m
+ .../calendar/names/islamic/islamic_bn.properties   |    85 [31m-[m
+ .../calendar/names/islamic/islamic_br.properties   |    26 [31m-[m
+ .../calendar/names/islamic/islamic_bs.properties   |    35 [31m-[m
+ .../calendar/names/islamic/islamic_cs.properties   |    91 [31m-[m
+ .../calendar/names/islamic/is
