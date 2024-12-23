@@ -31,7 +31,7 @@ const Following = ({ navigation, route, dispatch, followingListData }) => {
       header: () => (
         <>
           <MyHeader
-            title={t('following')}
+            title={'My Following'}
             socialIcons={false}
             navigation={navigation}
 

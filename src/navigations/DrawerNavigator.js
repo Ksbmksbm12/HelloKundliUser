@@ -423,9 +423,11 @@ function CustomDrawerContent(props) {
               <SVGMyFollowing />
             </View>
             <Text allowFontScaling={false} style={styles.buttonText}>
-              {t('following')}
+              My Following
             </Text>
           </TouchableOpacity>
+
+
 
           <TouchableOpacity
             onPress={() => navigation.navigate('astroBlog')}
@@ -447,10 +449,8 @@ function CustomDrawerContent(props) {
             </Text>
           </TouchableOpacity>
 
-
-
           <TouchableOpacity
-            onPress={() => navigation.navigate('howUse')}
+            onPress={() => navigation.navigate('supportuser')}
             style={styles.buttonContainer}>
             <View
               style={{
@@ -462,10 +462,10 @@ function CustomDrawerContent(props) {
                 backgroundColor: '#FFFFFF',
                 borderRadius: 100,
               }}>
-              <SVGHowToUse />
+              <SVGSupport />
             </View>
             <Text allowFontScaling={false} style={styles.buttonText}>
-              {t('How')}
+              {t('Customer Support')}
             </Text>
           </TouchableOpacity>
 
@@ -491,29 +491,7 @@ function CustomDrawerContent(props) {
             </Text>
           </TouchableOpacity>
 
-          {/* <TouchableOpacity
-            // onPress={openWhatsApp}
-            onPress={openDialer}
-            style={styles.buttonContainer}>
-            <LinearGradient
-              colors={[colors.background_theme2, colors.background_theme2]}
-              style={{
-                borderRadius: 10,
-                padding: 5,
-                height: SCREEN_WIDTH * 0.085,
-                width: SCREEN_WIDTH * 0.085,
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}>
-              <Image
-                source={require('../assets/myicons/help.png')}
-                style={styles.buttonImage}
-              />
-            </LinearGradient>
-            <Text allowFontScaling={false} style={styles.buttonText}>
-              {t('help')}
-            </Text>
-          </TouchableOpacity> */}
+
 
           <TouchableOpacity
             style={styles.buttonContainer}
@@ -540,7 +518,6 @@ function CustomDrawerContent(props) {
           </TouchableOpacity>
 
 
-
           <TouchableOpacity
             onPress={() => Linking.openURL('https://play.google.com/store/apps/details?id=com.ksbm.hellokundli')}
             style={styles.buttonContainer}>
@@ -560,6 +537,67 @@ function CustomDrawerContent(props) {
               {t('rate')}
             </Text>
           </TouchableOpacity>
+
+
+
+
+
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate('howUse')}
+            style={styles.buttonContainer}>
+            <View
+              style={{
+                padding: 8,
+                height: SCREEN_WIDTH * 0.10,
+                width: SCREEN_WIDTH * 0.10,
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: '#FFFFFF',
+                borderRadius: 100,
+              }}>
+              <SVGHowToUse />
+            </View>
+            <Text allowFontScaling={false} style={styles.buttonText}>
+              {t('How')}
+            </Text>
+          </TouchableOpacity>
+
+
+
+
+
+
+
+          {/* <TouchableOpacity
+            // onPress={openWhatsApp}
+            onPress={openDialer}
+            style={styles.buttonContainer}>
+            <LinearGradient
+              colors={[colors.background_theme2, colors.background_theme2]}
+              style={{
+                borderRadius: 10,
+                padding: 5,
+                height: SCREEN_WIDTH * 0.085,
+                width: SCREEN_WIDTH * 0.085,
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}>
+              <Image
+                source={require('../assets/myicons/help.png')}
+                style={styles.buttonImage}
+              />
+            </LinearGradient>
+            <Text allowFontScaling={false} style={styles.buttonText}>
+              {t('help')}
+            </Text>
+          </TouchableOpacity> */}
+
+
+
+
+
+
 
           {/* <TouchableOpacity
             style={styles.buttonContainer}
@@ -590,25 +628,7 @@ function CustomDrawerContent(props) {
 
 
 
-          <TouchableOpacity
-            onPress={() => navigation.navigate('supportuser')}
-            style={styles.buttonContainer}>
-            <View
-              style={{
-                padding: 8,
-                height: SCREEN_WIDTH * 0.10,
-                width: SCREEN_WIDTH * 0.10,
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: '#FFFFFF',
-                borderRadius: 100,
-              }}>
-              <SVGSupport />
-            </View>
-            <Text allowFontScaling={false} style={styles.buttonText}>
-              {t('Customer Support')}
-            </Text>
-          </TouchableOpacity>
+
 
 
           <TouchableOpacity onPress={logout} style={styles.buttonContainer}>

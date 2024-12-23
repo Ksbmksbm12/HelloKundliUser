@@ -22,7 +22,7 @@ const HowUse = ({ navigation, dispatch }) => {
   return (
     <View style={{ flex: 1, backgroundColor: colors.background_theme1, }}>
       <MyStatusBar />
-      <MyHeader title={'How to Use app'} navigation={navigation} />
+      <MyHeader title={'How to Use Our App ?'} navigation={navigation} />
       <ImageBackground source={require('../../assets/images/HowToUseBackground.png')} style={{ flex: 1, alignItems: 'center' }}>
         <View style={{ flex: 0, width: '93%', alignSelf: 'center', padding: 15, borderRadius: 10, marginTop: SCREEN_WIDTH * 0.2, gap: Sizes.fixPadding }}>
           <TouchableOpacity onPress={() => navigation.navigate('HowToScreenshots')}>
